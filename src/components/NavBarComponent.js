@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import StudentListComponent from "./StudentListComponent";
 import StudentCreateComponent from "./StudentCreateComponent";
+import StudentEditComponent from "./StudentEditComponent";
 function NavBarComponent() {
   return (
     <Router>
@@ -57,7 +58,7 @@ function NavBarComponent() {
       <Routes>
         <Route path="/all" element={<StudentListComponent />}></Route>
         <Route path="/add" element={ <StudentCreateComponent/>}></Route>
-        <Route path="/" element={<StudentListComponent />}></Route>
+        <Route path="/edit/:id" element={<StudentEditComponent />}></Route>
         <Route path="*" element={<StudentListComponent />}></Route>
       </Routes>
     </Router>

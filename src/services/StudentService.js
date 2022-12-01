@@ -21,7 +21,7 @@ class StudentService {
       }
 
       updateStudent(student) {
-            return axios.post(`${baseUrl}/modify`, student);
+            return axios.put(`${baseUrl}/modify`, student);
       }
 }
 

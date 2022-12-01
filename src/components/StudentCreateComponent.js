@@ -27,9 +27,13 @@ class StudentCreateComponent extends Component {
       stdAddr: this.state.stdAddr,
     };
     StudentService.createStudent(student).then((response) => {
-      alert(response.data);
+      this.setState({
+        message: response.data
+      });
+      setTimeout(() => {
+        this.props.navigation("/all");
+      },2000)
     });
-    this.props.navigation("/all");
   };
   render() {
     return (
@@ -69,6 +73,7 @@ class StudentCreateComponent extends Component {
             id="stdCourse"
             onChange={(event) => this.handleChange(event)}
             className="form-control"
+            value={this.state.stdCourse}
           >
             <option value="">SELECT</option>
             <option value="JAVA">JAVA</option>
@@ -82,6 +87,7 @@ class StudentCreateComponent extends Component {
             id="stdAddr"
             onChange={(event) => this.handleChange(event)}
             className="form-control"
+            value={this.state.stdAddr}
           ></textarea>
           <br />
           <button
@@ -96,6 +102,7 @@ class StudentCreateComponent extends Component {
             <strong>{this.state.message}</strong>
           </div>
         )}
+
       </div>
     );
   }
