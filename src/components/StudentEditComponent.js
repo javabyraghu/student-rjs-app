@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import StudentService from "../services/StudentService";
 
 const StudentEditComponent = () => {
   const initialFormState = {
-    stdId: 1,
+    stdId: "",
     stdName: "",
     stdGen: "",
     stdCourse: "",

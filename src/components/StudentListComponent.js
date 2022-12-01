@@ -28,9 +28,6 @@ class StudentListComponent extends Component {
     this.loadStudentData();
   }
 
-  componentDidUpdate() {
-    this.loadStudentData();
-  }
   loadStudentData() {
     StudentService.getAllStudents().then((response) => {
       this.setState({ students: response.data });
