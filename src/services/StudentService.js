@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseUrl = 'http://localhost:9690/v1/api/student';
+const baseUrl = 'http://spring-boot-rest-crud-mysqlex:8080/v1/api/student';
 
 class StudentService {
 
